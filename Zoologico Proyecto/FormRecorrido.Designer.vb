@@ -33,7 +33,8 @@ Partial Class FormRecorrido
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.dgvrecorrido = New System.Windows.Forms.DataGridView()
+        CType(Me.dgvrecorrido, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnEliminar
@@ -128,21 +129,21 @@ Partial Class FormRecorrido
         Me.ComboBox1.Size = New System.Drawing.Size(100, 23)
         Me.ComboBox1.TabIndex = 23
         '
-        'ListView1
+        'dgvrecorrido
         '
-        Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(419, 43)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(356, 380)
-        Me.ListView1.TabIndex = 24
-        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.dgvrecorrido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvrecorrido.Location = New System.Drawing.Point(400, 12)
+        Me.dgvrecorrido.Name = "dgvrecorrido"
+        Me.dgvrecorrido.RowTemplate.Height = 25
+        Me.dgvrecorrido.Size = New System.Drawing.Size(388, 426)
+        Me.dgvrecorrido.TabIndex = 24
         '
         'FormRecorrido
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.ListView1)
+        Me.Controls.Add(Me.dgvrecorrido)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnEditar)
@@ -156,6 +157,7 @@ Partial Class FormRecorrido
         Me.Controls.Add(Me.TextBox1)
         Me.Name = "FormRecorrido"
         Me.Text = "FormRecorrido"
+        CType(Me.dgvrecorrido, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -172,5 +174,5 @@ Partial Class FormRecorrido
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents ListView1 As ListView
+    Friend WithEvents dgvrecorrido As DataGridView
 End Class

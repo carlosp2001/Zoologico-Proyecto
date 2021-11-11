@@ -25,24 +25,23 @@ Partial Class FormEspecie
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.btnIngresar = New System.Windows.Forms.Button()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtnombrecienti = New System.Windows.Forms.TextBox()
+        Me.txtdescripcion = New System.Windows.Forms.TextBox()
+        Me.txtnombrec = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.txtespecieid = New System.Windows.Forms.TextBox()
+        Me.cbxHabitat = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.dgvespecie = New System.Windows.Forms.DataGridView()
+        CType(Me.dgvespecie, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(119, 447)
+        Me.btnEliminar.Location = New System.Drawing.Point(119, 398)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(139, 69)
         Me.btnEliminar.TabIndex = 22
@@ -51,7 +50,7 @@ Partial Class FormEspecie
         '
         'btnEditar
         '
-        Me.btnEditar.Location = New System.Drawing.Point(206, 349)
+        Me.btnEditar.Location = New System.Drawing.Point(206, 300)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(139, 69)
         Me.btnEditar.TabIndex = 21
@@ -60,47 +59,47 @@ Partial Class FormEspecie
         '
         'btnIngresar
         '
-        Me.btnIngresar.Location = New System.Drawing.Point(28, 349)
+        Me.btnIngresar.Location = New System.Drawing.Point(28, 300)
         Me.btnIngresar.Name = "btnIngresar"
         Me.btnIngresar.Size = New System.Drawing.Size(139, 69)
         Me.btnIngresar.TabIndex = 20
         Me.btnIngresar.Text = "Ingresar"
         Me.btnIngresar.UseVisualStyleBackColor = True
         '
-        'TextBox4
+        'txtnombrecienti
         '
-        Me.TextBox4.Location = New System.Drawing.Point(149, 183)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 23)
-        Me.TextBox4.TabIndex = 19
+        Me.txtnombrecienti.Location = New System.Drawing.Point(149, 132)
+        Me.txtnombrecienti.Name = "txtnombrecienti"
+        Me.txtnombrecienti.Size = New System.Drawing.Size(100, 23)
+        Me.txtnombrecienti.TabIndex = 19
         '
-        'TextBox3
+        'txtdescripcion
         '
-        Me.TextBox3.Location = New System.Drawing.Point(149, 134)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 23)
-        Me.TextBox3.TabIndex = 18
+        Me.txtdescripcion.Location = New System.Drawing.Point(149, 181)
+        Me.txtdescripcion.Name = "txtdescripcion"
+        Me.txtdescripcion.Size = New System.Drawing.Size(100, 23)
+        Me.txtdescripcion.TabIndex = 18
         '
-        'TextBox2
+        'txtnombrec
         '
-        Me.TextBox2.Location = New System.Drawing.Point(149, 87)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 23)
-        Me.TextBox2.TabIndex = 17
+        Me.txtnombrec.Location = New System.Drawing.Point(149, 87)
+        Me.txtnombrec.Name = "txtnombrec"
+        Me.txtnombrec.Size = New System.Drawing.Size(100, 23)
+        Me.txtnombrec.TabIndex = 17
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(28, 186)
+        Me.Label4.Location = New System.Drawing.Point(28, 135)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(41, 15)
+        Me.Label4.Size = New System.Drawing.Size(108, 15)
         Me.Label4.TabIndex = 16
-        Me.Label4.Text = "Clima:"
+        Me.Label4.Text = "Nombre Cientifico:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(28, 137)
+        Me.Label3.Location = New System.Drawing.Point(28, 184)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(72, 15)
         Me.Label3.TabIndex = 15
@@ -124,20 +123,20 @@ Partial Class FormEspecie
         Me.Label1.TabIndex = 13
         Me.Label1.Text = "Id Especie:"
         '
-        'TextBox1
+        'txtespecieid
         '
-        Me.TextBox1.Location = New System.Drawing.Point(149, 45)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 23)
-        Me.TextBox1.TabIndex = 12
+        Me.txtespecieid.Location = New System.Drawing.Point(149, 45)
+        Me.txtespecieid.Name = "txtespecieid"
+        Me.txtespecieid.Size = New System.Drawing.Size(100, 23)
+        Me.txtespecieid.TabIndex = 12
         '
-        'ComboBox1
+        'cbxHabitat
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(149, 236)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 23)
-        Me.ComboBox1.TabIndex = 23
+        Me.cbxHabitat.FormattingEnabled = True
+        Me.cbxHabitat.Location = New System.Drawing.Point(149, 236)
+        Me.cbxHabitat.Name = "cbxHabitat"
+        Me.cbxHabitat.Size = New System.Drawing.Size(121, 23)
+        Me.cbxHabitat.TabIndex = 23
         '
         'Label5
         '
@@ -148,54 +147,37 @@ Partial Class FormEspecie
         Me.Label5.TabIndex = 24
         Me.Label5.Text = "Habitat:"
         '
-        'Label6
+        'dgvespecie
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(28, 293)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(136, 15)
-        Me.Label6.TabIndex = 25
-        Me.Label6.Text = "Indice de vulnerabilidad:"
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(170, 290)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 23)
-        Me.TextBox5.TabIndex = 26
-        '
-        'ListView1
-        '
-        Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(387, 12)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(401, 504)
-        Me.ListView1.TabIndex = 27
-        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.dgvespecie.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvespecie.Location = New System.Drawing.Point(386, 12)
+        Me.dgvespecie.Name = "dgvespecie"
+        Me.dgvespecie.RowTemplate.Height = 25
+        Me.dgvespecie.Size = New System.Drawing.Size(402, 504)
+        Me.dgvespecie.TabIndex = 27
         '
         'FormEspecie
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 532)
-        Me.Controls.Add(Me.ListView1)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.dgvespecie)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cbxHabitat)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.btnIngresar)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtnombrecienti)
+        Me.Controls.Add(Me.txtdescripcion)
+        Me.Controls.Add(Me.txtnombrec)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtespecieid)
         Me.Name = "FormEspecie"
         Me.Text = "FormEspecie"
+        CType(Me.dgvespecie, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -204,17 +186,15 @@ Partial Class FormEspecie
     Friend WithEvents btnEliminar As Button
     Friend WithEvents btnEditar As Button
     Friend WithEvents btnIngresar As Button
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtnombrecienti As TextBox
+    Friend WithEvents txtdescripcion As TextBox
+    Friend WithEvents txtnombrec As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents txtespecieid As TextBox
+    Friend WithEvents cbxHabitat As ComboBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents ListView1 As ListView
+    Friend WithEvents dgvespecie As DataGridView
 End Class

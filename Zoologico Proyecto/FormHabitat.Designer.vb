@@ -31,9 +31,10 @@ Partial Class FormHabitat
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.btnIngresar = New System.Windows.Forms.Button()
-        Me.ListView1 = New System.Windows.Forms.ListView()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.dgvhabitat = New System.Windows.Forms.DataGridView()
+        CType(Me.dgvhabitat, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -109,15 +110,6 @@ Partial Class FormHabitat
         Me.btnIngresar.Text = "Ingresar"
         Me.btnIngresar.UseVisualStyleBackColor = True
         '
-        'ListView1
-        '
-        Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(383, 25)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(405, 404)
-        Me.ListView1.TabIndex = 9
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        '
         'btnEditar
         '
         Me.btnEditar.Location = New System.Drawing.Point(210, 271)
@@ -136,14 +128,23 @@ Partial Class FormHabitat
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
+        'dgvhabitat
+        '
+        Me.dgvhabitat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvhabitat.Location = New System.Drawing.Point(429, 12)
+        Me.dgvhabitat.Name = "dgvhabitat"
+        Me.dgvhabitat.RowTemplate.Height = 25
+        Me.dgvhabitat.Size = New System.Drawing.Size(371, 426)
+        Me.dgvhabitat.TabIndex = 12
+        '
         'FormHabitat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(812, 450)
+        Me.Controls.Add(Me.dgvhabitat)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnEditar)
-        Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.btnIngresar)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.TextBox3)
@@ -155,6 +156,7 @@ Partial Class FormHabitat
         Me.Controls.Add(Me.TextBox1)
         Me.Name = "FormHabitat"
         Me.Text = "FormHabitat"
+        CType(Me.dgvhabitat, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -169,7 +171,7 @@ Partial Class FormHabitat
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents btnIngresar As Button
-    Friend WithEvents ListView1 As ListView
     Friend WithEvents btnEditar As Button
     Friend WithEvents btnEliminar As Button
+    Friend WithEvents dgvhabitat As DataGridView
 End Class
